@@ -3,6 +3,9 @@
   <p class="face-snap-card-created">Mis en ligne le {{ createdDate }}</p>
   <img [src]="imageUrl" [alt]="title" />
   <p>{{ description }}</p>
-  <p>{{ snaps }}</p>
+  <p>
+    <button (click)="onSnap()">{{ buttonText}}</button>
+    &#9757; {{ snaps }}
+  </p>
 </div>
 
