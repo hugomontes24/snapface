@@ -29,9 +29,26 @@
     font-size: 14px;
     font-weight: 500;
 
-    &:active {
+    }
+    
+
+  &:active {
       transform: translate(1px, 1px);
       box-shadow: lightgray 0 0 5px;
     }
+
+  &.snapped {
+    background-color: rgba(255, 182, 219,.5);
+    color: darkgreen;
+
+    button {
+      box-shadow: rgba(255, 182, 219,.5) 3px 3px 7px;
+      color: darkgreen;
+
+      &:active {
+        box-shadow: rgba(255, 182, 219,.5) 0 0 5px;
+      }
+    }
   }
 }
+
