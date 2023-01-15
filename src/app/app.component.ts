@@ -12,27 +12,28 @@ export class AppComponent implements OnInit {
   myLastSnap!: FaceSnap;
 
   ngOnInit() {
-    this.mySnap = new FaceSnap(
-      'Archibald',
-      'My best friend',
-      './../../assets/f1.jpg',
-      new Date(),
-      6
-    );
-    this.myOtherSnap = new FaceSnap(
-      'Three Rock Mountain',
-      'Beautiful place',
-      './../../assets/f2.jpg',
-      new Date(),
-      1
-    );
-    this.myLastSnap = new FaceSnap(
-      'A good recipe',
-      'It\'s always appreciate',
-      './../../assets/f3.jpg',
-      new Date(),
-      3
-    );
-
+    this.mySnap = {
+      title: 'Archibald',
+      description: 'My best friend',
+      imageUrl: './../../assets/f2.jpg',
+      createdDate: new Date(),
+      snaps: 6,
+      location: 'Paris'
+    };
+    this.myOtherSnap = {
+      title: 'Archibald',
+      description: 'My best friend',
+      imageUrl: './../../assets/f1.jpg',
+      createdDate: new Date(),
+      snaps: 6,
+      location: 'Paris'
+    };
+    this.myLastSnap = {
+      title: 'Archibald',
+      description: 'My best friend',
+      imageUrl: './../../assets/f3.jpg',
+      createdDate: new Date(),
+      snaps: 6,
+    };
   }
 }
