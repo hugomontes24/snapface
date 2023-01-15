@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
         description: 'My best friend',
         imageUrl: './../../assets/f2.jpg',
         createdDate: new Date(),
-        snaps: 6,
+        snaps: 1,
         location: 'Paris'
       },
       {
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
         description: 'My best friend',
         imageUrl: './../../assets/f1.jpg',
         createdDate: new Date(),
-        snaps: 6,
+        snaps: 3,
         location: 'Paris'
       },
       {
