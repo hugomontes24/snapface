@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
         location: 'Paris'
       },
       {
-        title: 'Archibald',
+        title: 'My best friend',
         description: 'My best friend',
         imageUrl: './../../assets/f1.jpg',
         createdDate: new Date(),
