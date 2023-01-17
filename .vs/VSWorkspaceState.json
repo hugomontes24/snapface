@@ -3,10 +3,8 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\face-snap-list",
-    "\\src\\app\\header",
     "\\src\\app\\models"
   ],
-  "SelectedNode": "\\src\\app\\header\\header.component.ts",
+  "SelectedNode": "\\src\\app\\app.component.html",
   "PreviewInSolutionExplorer": false
 }
