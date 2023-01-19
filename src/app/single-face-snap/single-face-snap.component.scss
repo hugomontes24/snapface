@@ -16,12 +16,12 @@
   p {
     font-weight: 300;
     font-size: 16px;
-  }    
+  }
 
   &:active {
-      transform: translate(1px, 1px);
-      box-shadow: lightgray 0 0 5px;
-    }
+    transform: translate(1px, 1px);
+    box-shadow: lightgray 0 0 5px;
+  }
 
   &.snapped {
     background-color: rgba(255, 182, 219,.5);
@@ -37,4 +37,3 @@
     }
   }
 }
-
