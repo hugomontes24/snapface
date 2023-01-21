@@ -1,4 +1,11 @@
 <div class="landing-block">
+  <form #emailForm="ngForm" (ngSubmit)="onSubmitForm(emailForm)">
+    <label for="emailInput">Newsletter. Inscrivez-vous</label>
+    <!-- Liaison a double sens [( ngModel )]-->
+    <input type="email" id="emailInput" [(ngModel)]="userEmail" name="userEmail" />
+    <button type="submit">OK !</button>
+  </form>
+
   <img src="../../assets/eP.svg" alt="easyPortfolio logo"/>
   <div class="landing-links">
     <button (click)="onContinue()">Continuer vers Snapface</button>

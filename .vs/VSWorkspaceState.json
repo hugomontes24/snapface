@@ -3,8 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\models"
+    "\\src\\app\\face-snap-list",
+    "\\src\\app\\services"
   ],
-  "SelectedNode": "\\src\\app\\app.component.html",
+  "SelectedNode": "\\src\\app\\face-snap-list\\face-snap-list.component.html",
   "PreviewInSolutionExplorer": false
 }

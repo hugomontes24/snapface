@@ -1,41 +1,20 @@
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
 import { FaceSnap } from "../models/face-snap.model";
 
 @Injectable({
   providedIn:'root'
   })
 export class FaceSnapsService {
-  faceSnaps: FaceSnap[] = [
-    {
-      id: 1,
-      title: 'Archibald',
-      description: 'Mon meilleur ami depuis tout petit',
-      imageUrl: '../assets/f1.jpg',
-      createdDate: new Date(),
-      snaps: 6,
-      location: 'Paris'
-    },
-    {
-      id: 2,
-      title: 'Archibald',
-      description: 'Mon meilleur ami depuis tout petit',
-      imageUrl: '../assets/f2.jpg',
-      createdDate: new Date(),
-      snaps: 0,
-      location: 'Marseille'
-    },
-    {
-      id: 3,
-      title: 'Fleurs',
-      description: 'Mon meilleur ami depuis tout petit',
-      imageUrl: '../assets/f3.jpg',
-      createdDate: new Date(),
-      snaps: 3
-    }
-  ];
 
-  getAllFaceSnaps(): FaceSnap[] {
-    return this.faceSnaps;
+  constructor(private http: HttpClient) { };
+
+  faceSnaps: FaceSnap[] = [];
+   
+
+  getAllFaceSnaps(): Observable<FaceSnap[]> {
+    return this.http.get < FaceSnap[]>('http://localhost:3000/facesnaps');
   }
 
   getFaceSnapById(faceSnapId: number): FaceSnap {
@@ -52,6 +31,20 @@ export class FaceSnapsService {
     const faceSnap = this.getFaceSnapById(faceSnapId);
     snapType === 'snap' ? faceSnap.snaps++ : faceSnap.snaps--;
   }
-  
+
+  addFaceSnap(formValue: {
+    title: string,
+    description: string,
+    imageUrl: string,
+    location?: string
+  }): void {
+    const faceSnap: FaceSnap = {
+      ...formValue,
+      createdDate: new Date(),
+      snaps: 0,
+      id: this.faceSnaps[this.faceSnaps.length - 1].id + 1
+    }
+    this.faceSnaps.push(faceSnap);
+  }
 
 }
